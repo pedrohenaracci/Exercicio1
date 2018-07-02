@@ -25,7 +25,6 @@ public class SenderActivity extends AppCompatActivity {
     }
 
     public void botaoPressionado(View view) {
-        Toast.makeText(this,"Ta pronta a torrada",Toast.LENGTH_SHORT);
         Intent receptorActivity = new Intent(this,ReceptorActivity.class);
 
         Bundle umBundle = new Bundle();
@@ -34,6 +33,7 @@ public class SenderActivity extends AppCompatActivity {
         umBundle.putString("idade",idade.getText().toString());
         receptorActivity.putExtras(umBundle);
         startActivity(receptorActivity);
+        Toast.makeText(this,"Ta pronta a torrada",Toast.LENGTH_SHORT).show();
     }
 }
 

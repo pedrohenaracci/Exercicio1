@@ -23,9 +23,9 @@ public class ReceptorActivity extends AppCompatActivity {
         Intent receptor = getIntent();
         Bundle umBundle = receptor.getExtras();
 
-        nome2 = (TextView) findViewById(R.id.textView_1);
-        sobrenome2 = (TextView) findViewById(R.id.textView_2);
-        idade2 = (TextView) findViewById(R.id.textView_3);
+        nome2 = (TextView) findViewById(R.id.textView_nome2);
+        sobrenome2 = (TextView) findViewById(R.id.textView_sobrenome2);
+        idade2 = (TextView) findViewById(R.id.textView_idade2);
 
         nome = umBundle.getString("nome");
         sobrenome = umBundle.getString("sobrenome");
@@ -41,8 +41,10 @@ public class ReceptorActivity extends AppCompatActivity {
     }
 
     public void botaoPressionado(View view) {
-        Toast.makeText(this,"Ta pronta a torrada",Toast.LENGTH_SHORT);
+
+        Toast.makeText(this,"A torrada queimada",Toast.LENGTH_SHORT).show();
         Intent senderActivity = new Intent(this,SenderActivity.class);
         startActivity(senderActivity);
+
     }
 }
